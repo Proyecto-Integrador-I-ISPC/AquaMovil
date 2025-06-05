@@ -23,7 +23,11 @@ Todo el sistema funciona por consola y está pensado para ofrecer una experienci
 
 
 # Historias de clientes / usuarios iniciales:
+1) Como persona con muy poco tiempo libre, quiero solicitar un lavado de auto desde el celular, para no perder tiempo y aprovechar el servicio a domicilio sin salir de casa.
 
+2) Como usuaria nueva, quiero ver claramente los precios, tipos de lavado y horarios disponibles. Así, poder elegir el servicio que mejor se adapte a mi necesidad.
+
+3) Como persona sin conocimientos técnicos, quiero una página web o aplicación digital simple y fácil de usar, para solicitar el servicio sin complicaciones desde cualquier lugar.
 
 # Integrantes del equipo:
 Actualmente, nuestro equipo está conformado por los siguientes integrantes:

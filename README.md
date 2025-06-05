@@ -26,10 +26,6 @@ Todo el sistema funciona por consola y está pensado para ofrecer una experienci
 
 3.Propietarios de vehículos o casas específicas con necesidades particulares: Uber,remis,transporte escolar, transporte de personas privado. Arrendatarios, casas de alquiler, comunidades o vecindarios, vecinos organizados que buscan descuentos por contratación colectiva.
 
-● Individuos ocupados o profesionales. Ejecutivos o trabajadores con horarios intensos de trabajo que delegan las tareas domésticas. Personas solteras sin tiempo. Trabajadores remotos o freelance.
-
-● Propietarios de vehículos o casas específicas con necesidades particulares: Uber,remis,transporte escolar, transporte de personas privado. Arrendatarios, casas de alquiler, comunidades o vecindarios, vecinos organizados que buscan descuentos por contratación colectiva.
-
 # Historias de clientes / usuarios iniciales:
 1) Como persona con muy poco tiempo libre, quiero solicitar un lavado de auto desde el celular, para no perder tiempo y aprovechar el servicio a domicilio sin salir de casa.
 

@@ -20,7 +20,17 @@ Te presentamos Aquamóvil, una aplicación pensada para vos: fácil de usar, rá
 Todo el sistema funciona por consola y está pensado para ofrecer una experiencia clara, ordenada y útil para clientes y trabajadores.
 
 # Usuarios / Clientes Potenciales:
+1.Individuos ocupados o profesionales. Ejecutivos o trabajadores con horarios intensos de trabajo que delegan las tareas domésticas. Personas solteras sin tiempo. Trabajadores remotos o freelance.
 
+2.Familias con doble ingreso ya que los ayudaría a equilibrar la vida personal con la vida laboral y doméstica. Padres, madres primerizos con alta demanda de tiempo en el cuidado de los hijos. Adultos mayores con movilidad reducida que necesitan ayuda en tareas físicas.
+
+3.Propietarios de vehículos o casas específicas con necesidades particulares: Uber,remis,transporte escolar, transporte de personas privado. Arrendatarios, casas de alquiler, comunidades o vecindarios, vecinos organizados que buscan descuentos por contratación colectiva.
+
+● Individuos ocupados o profesionales. Ejecutivos o trabajadores con horarios intensos de trabajo que delegan las tareas domésticas. Personas solteras sin tiempo. Trabajadores remotos o freelance.
+
+● Familias con doble ingreso ya que los ayudaría a equilibrar la vida personal con la vida laboral y doméstica. Padres, madres primerizos con alta demanda de tiempo en el cuidado de los hijos. Adultos mayores con movilidad reducida que necesitan ayuda en tareas físicas.
+
+● Propietarios de vehículos o casas específicas con necesidades particulares: Uber,remis,transporte escolar, transporte de personas privado. Arrendatarios, casas de alquiler, comunidades o vecindarios, vecinos organizados que buscan descuentos por contratación colectiva.
 
 # Historias de clientes / usuarios iniciales:
 1) Como persona con muy poco tiempo libre, quiero solicitar un lavado de auto desde el celular, para no perder tiempo y aprovechar el servicio a domicilio sin salir de casa.
@@ -38,8 +48,7 @@ Actualmente, nuestro equipo está conformado por los siguientes integrantes:
 
 3) Emilse González: Soy profesora de Lengua y Literatura e Inglés, apasionada por el orden, el detalle y la atención personalizada. Aunque no tengo formación previa en programación, estoy dando mis primeros pasos con mucho entusiasmo. Pretendo documentar este proyecto y organizarlo con claridad, aprovechando mis competencias comunicativas y mi compromiso con la calidad. Algunas de mis habilidades son: excelente comunicación con los/as clientes, responsabilidad y puntualidad, cuidado minucioso en cada detalle del proceso de los pedidos, capacidad de organización y gestión autónoma y creatividad para resolver problemas cotidianos.
 
-4)
-
+4)  Marcela Villanueva: Mi aporte al equipo de trabajo es dar ideas para el desarrollo comercial y técnico del proyecto que deseamos llevar a cabo. Estoy dando mis primeros pasos en la programación, a través de Python, y en base de datos con SQL. También puedo aportar estrategias de comunicación asertiva en el equipo y en posibles vínculos con el cliente final, resolución de problemas aplicando metodologías que sean oportunidades de mejora.
 5) 
 
 6)

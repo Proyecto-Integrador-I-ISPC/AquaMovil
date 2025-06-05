@@ -30,7 +30,7 @@ Actualmente, nuestro equipo está conformado por los siguientes integrantes:
 
 1) Abigail Picone: Soy la Scrum Master del equipo. Mi aporte principal al proyecto es coordinar al grupo, facilitar la organización del trabajo y asegurar que se cumplan los tiempos y objetivos propuestos. Como Scrum Master, aporto habilidades de comunicación, organización, liderazgo colaborativo y resolución de conflictos. También tengo conocimientos básicos de programación, lo cual me permite comprender mejor las tareas técnicas y acompañar al equipo de manera efectiva.
 
-2)
+2) Irina Pirles: Tengo conocimientos en C++, Python, HTML, CSS, Git y GitHub, entre otros. Me destaco por mi rápida resolución de problemas en código, así como por mi responsabilidad y capacidad de adaptación. Además, disfruto del trabajo en equipo y tengo experiencia colaborando en proyectos donde la eficiencia y la creatividad son clave. Siempre estoy en busca de nuevos desafíos que me permitan seguir aprendiendo y mejorando.
 
 3) 
 

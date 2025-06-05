@@ -28,8 +28,6 @@ Todo el sistema funciona por consola y está pensado para ofrecer una experienci
 
 ● Individuos ocupados o profesionales. Ejecutivos o trabajadores con horarios intensos de trabajo que delegan las tareas domésticas. Personas solteras sin tiempo. Trabajadores remotos o freelance.
 
-● Familias con doble ingreso ya que los ayudaría a equilibrar la vida personal con la vida laboral y doméstica. Padres, madres primerizos con alta demanda de tiempo en el cuidado de los hijos. Adultos mayores con movilidad reducida que necesitan ayuda en tareas físicas.
-
 ● Propietarios de vehículos o casas específicas con necesidades particulares: Uber,remis,transporte escolar, transporte de personas privado. Arrendatarios, casas de alquiler, comunidades o vecindarios, vecinos organizados que buscan descuentos por contratación colectiva.
 
 # Historias de clientes / usuarios iniciales:

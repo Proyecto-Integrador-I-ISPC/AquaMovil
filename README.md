@@ -27,12 +27,6 @@ Todo el sistema funciona por consola y está pensado para ofrecer una experienci
 
 3. Propietarios de vehículos o casas específicas con necesidades particulares: Uber,remis,transporte escolar, transporte de personas privado. Arrendatarios, casas de alquiler, comunidades o vecindarios, vecinos organizados que buscan descuentos por contratación colectiva.
 
-● Individuos ocupados o profesionales. Ejecutivos o trabajadores con horarios intensos de trabajo que delegan las tareas domésticas. Personas solteras sin tiempo. Trabajadores remotos o freelance.
-
-● Familias con doble ingreso ya que los ayudaría a equilibrar la vida personal con la vida laboral y doméstica. Padres, madres primerizos con alta demanda de tiempo en el cuidado de los hijos. Adultos mayores con movilidad reducida que necesitan ayuda en tareas físicas.
-
-● Propietarios de vehículos o casas específicas con necesidades particulares: Uber,remis,transporte escolar, transporte de personas privado. Arrendatarios, casas de alquiler, comunidades o vecindarios, vecinos organizados que buscan descuentos por contratación colectiva.
-
 # Historias de clientes / usuarios iniciales:
 1) Como persona con muy poco tiempo libre, quiero solicitar un lavado de auto desde el celular, para no perder tiempo y aprovechar el servicio a domicilio sin salir de casa.
 
@@ -54,4 +48,3 @@ Actualmente, nuestro equipo está conformado por los siguientes integrantes:
 5) Mauricio Pucheta: Como desarrollador, puedo aportar una amplia variedad de conocimientos, teniendo una noción total sobre el ciclo de vida del software. Mis conocimientos se basan en el Frontend, con un fluído manejo de HTML, CSS (Tailwind) y Javascript (ES6+), así como de Backend implementando la construcción de API's RESTful con Node.js y Express. No obstante, al momento de programar intento valerme de las buenas prácticas e implementar arquitecturas escalables como "Arquitectura de capas" para Node.js en conjunto con patrones de diseño CommonJS o ES Modules. Alguna de mis skill extras son el manejo de motores de BD SQL como MySQL (Workbench) y PostgreSQL (PgAdmin4) así como el manejo de herramientas de diseño como Figma para practicar UX/UI.
 
 6) Astrid A. Luppi: Soy diseñadora industrial y puedo aportar mis conocimientos de diseñadora, gráfica, marketing, gestión de proyectos, generación de contenido y edición de video. Profesionalmente me he desarrollado tanto bajo relación de dependencia como de manera independiente, lo que me ha permitido adquirir habilidades y conocimientos para tener una visión holística del mercado y de los diferentes desafíos que pueden presentarse en los equipos de trabajo. Con ésta tecnicatura, estoy adquiriendo mis primeros conocimientos en programación y base de datos.
-

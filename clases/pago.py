@@ -1,4 +1,4 @@
-from pedido import Pedidos
+from clases.pedido import Pedidos
 
 class Pago:
     def __init__(self, id_pago, pedido:Pedidos, tipo_pago, monto, fecha_pago, estado_pago):

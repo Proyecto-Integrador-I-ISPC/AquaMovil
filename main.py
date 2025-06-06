@@ -215,3 +215,221 @@ while (True):
                                                                                         except ValueError:
                                                                                             print('¡Error! Ingrese un número de opción válida')
                                                                             elif usuario_a_cambiar in diccionario_empleados.keys():
+                                                                                print(f'El usuario con correo "{usuario_a_cambiar}" es un empleado')
+                                                                                print('¿Qué rol desea asignarle?')
+                                                                                while(True):
+                                                                                    print('1. Cliente') 
+                                                                                    print('2. Administrador')
+                                                                                    print('3. Salir')
+                                                                                    opcion_rol = input()
+                                                                                    opcion_rol = opcion_rol.replace(" ", "")
+
+                                                                                    if not opcion_rol:
+                                                                                        print('¡Error! Campo vacío no permitido. Pruebe nuevamente...')
+                                                                                    else:
+                                                                                        try:
+                                                                                            opcion_rol = int(opcion_rol)
+                                                                                            match opcion_rol:
+                                                                                                case 1:
+                                                                                                    Administrador.cambiar_rol_cliente()
+                                                                                                    print(f'¡Éxito! El empleado con correo "{usuario_a_cambiar}" ahora es cliente')
+                                                                                                case 2:
+                                                                                                    Administrador.cambiar_rol_administrador()
+                                                                                                    print(f'¡Éxito! El empleado con correo "{usuario_a_cambiar}" ahora es administrador')
+                                                                                                case 3:
+                                                                                                    print('Saliendo...')
+                                                                                                    break
+                                                                                                case _:
+                                                                                                    print('¡Ops! Parece que haz seleccionado una opción no válida. Pruebe nuevamente...')
+                                                                                        except ValueError:
+                                                                                            print('¡Error! Ingrese un número de opción válida')
+                                                                            elif usuario_a_cambiar in diccionario_administradores.keys():
+                                                                                print(f'El usuario con correo "{usuario_a_cambiar}" es un administrador')
+                                                                                print('¿Qué rol desea asignarle?')
+                                                                                while(True):
+                                                                                    print('1. Cliente') 
+                                                                                    print('2. Empleado')
+                                                                                    print('3. Salir')
+                                                                                    opcion_rol = input()
+                                                                                    opcion_rol = opcion_rol.replace(" ", "")
+
+                                                                                    if not opcion_rol:
+                                                                                        print('¡Error! Campo vacío no permitido. Pruebe nuevamente...')
+                                                                                    else:
+                                                                                        try:
+                                                                                            opcion_rol = int(opcion_rol)
+                                                                                            match opcion_rol:
+                                                                                                case 1:
+                                                                                                    Administrador.cambiar_rol_cliente()
+                                                                                                    print(f'¡Éxito! El administrador con correo "{usuario_a_cambiar}" ahora es cliente')
+                                                                                                case 2:
+                                                                                                    Administrador.cambiar_rol_empleado()
+                                                                                                    print(f'¡Éxito! El administrador con correo "{usuario_a_cambiar}" ahora es empleado')
+                                                                                                case 3:
+                                                                                                    print('Saliendo...')
+                                                                                                    break
+                                                                                                case _:
+                                                                                                    print('¡Ops! Parece que haz seleccionado una opción no válida. Pruebe nuevamente...')
+                                                                                        except ValueError:
+                                                                                            print('¡Error! Ingrese un número de opción válida')
+                                                                            else:
+                                                                                print('¡Error! El email ingresado no existe')
+                                                                    case 2:
+                                                                        print('Saliendo...')
+                                                                        break
+                                                                    case _:
+                                                                        print('¡Ops! Parece que haz seleccionado una opción no válida. Pruebe nuevamente...')
+                                                            except ValueError:
+                                                                print('¡Error! Ingrese un número de opción válida') 
+                                                case 6:
+                                                    while (True):
+                                                        print('Opciones Disponibles:')
+                                                        print('1. Ingrese el email del usuario que desea eliminar')
+                                                        print('2. Salir')
+                                                        opcion_seleccionada = input()
+                                                        opcion_seleccionada = opcion_seleccionada.replace(" ", "")
+                                                        if not opcion_seleccionada:
+                                                            print('¡Error! Campo vacío no permitido. Pruebe nuevamente...') 
+                                                        else:
+                                                            try:
+                                                                opcion_seleccionada = int(opcion_seleccionada)
+                                                                match opcion_seleccionada:
+                                                                    case 1:
+                                                                        print('Ingrese el email:')
+                                                                        usuario_a_eliminar = input()
+                                                                        usuario_a_eliminar = usuario_a_eliminar.replace(" ", "")
+
+                                                                        if not usuario_a_eliminar:
+                                                                            print('¡Error! Campo vacío no permitido. Pruebe nuevamente...')
+                                                                        else:
+                                                                            if usuario_a_eliminar in diccionario_clientes.keys():
+                                                                                Administrador.eliminar_cliente()
+                                                                                print(f'¡Éxito! El cliente "{usuario_a_eliminar}" ha sido eliminado correctamente')
+                                                                            elif usuario_a_eliminar in diccionario_empleados.keys():
+                                                                                Administrador.eliminar_empleado()
+                                                                                print(f'¡Éxito! El empleado "{usuario_a_eliminar}" ha sido eliminado correctamente')
+                                                                            elif usuario_a_eliminar in diccionario_administradores.keys() and usuario_a_eliminar != administrador_uno:
+                                                                                Administrador.eliminar_administrador()
+                                                                                print(f'¡Éxito! El administrador "{usuario_a_eliminar}" ha sido eliminado correctamente')
+                                                                            else:
+                                                                                print('¡Error! El usuario que deseas eliminar no existe')
+                                                                    case 2:
+                                                                        print('Saliendo...')
+                                                                        break
+                                                                    case _:
+                                                                        print('¡Ops! Parece que haz seleccionado una opción no válida. Pruebe nuevamente...')
+                                                            except ValueError:
+                                                                print('¡Error! Ingrese un número de opción válida')
+                                                case 7:
+                                                    print('Saliendo...')
+                                                    break
+                                                case _:
+                                                    print('¡Ops! Parece que haz seleccionado una opción no válida. Pruebe nuevamente...')
+                                        except ValueError:
+                                            print('¡Error! Ingrese un número de opción válida')
+                                break
+                            else:
+                                if intentos < 3:
+                                    print('No se ha encontrando ninguna cuenta asociada a esos datos')
+                                    intentos = intentos + 1
+                                else:
+                                    print('¡Error! Vuelve a intentarlo más tarde...')
+                                    break
+                case 2:
+
+                    intentos = 0
+
+                    while(intentos < 9):
+
+                        print('Complete el siguiente formulario para registrarse en el sistema:')
+
+
+                        dni_usuario = input('DNI (sin guiones ni puntos):\n')
+                        nombre_usuario = input('Nombre:\n')
+                        apellido_usuario = input('Apellido:\n')
+                        email_usuario = input('Email:\n')
+                        telefono_usuario = input('Teléfono:\n')
+                        clave_usuario = input('Genere una clave:\n')
+                        fecha_registro_usuario = datetime.now()
+
+                        dni_usuario = dni_usuario.replace(" ", "")
+                        nombre_usuario = nombre_usuario.replace(" ", "")
+                        apellido_usuario = apellido_usuario.replace(" ", "")
+                        email_usuario = email_usuario.replace(" ","")
+                        telefono_usuario = telefono_usuario.replace(" ", "")
+                        clave_usuario = clave_usuario.replace(" ", "")
+
+                        if not dni_usuario or not nombre_usuario or not apellido_usuario or not email_usuario or not telefono_usuario or not clave_usuario:
+                            print('¡Error! Campo/s vacío/s no permitido/s. Pruebe nuevamente...')
+                            intentos = intentos + 1
+                        elif intentos == 8:
+                            print('¡Error! Haz alcanzado el límite máximo de intentos... Vuelve a intentarlo más tarde')
+                            break
+                        else:
+                            try:
+
+                                if len(dni_usuario) < 7:
+                                    while (intentos < 9):
+                                        print('¡Error! El DNI debe contener al menos 7 dígitos')
+                                        dni_usuario = input('Ingrese nuevamente su DNI:\n')
+
+                                        if len(dni_usuario) < 7:
+                                            intentos = intentos + 1
+                                        else:
+                                            break                               
+
+                                if len(telefono_usuario) < 10 or len(telefono_usuario) > 15:
+                                    while (intentos < 9):
+                                        print('¡Error! El teléfono debe contener entre 10 y 15 carácteres')
+                                        telefono_usuario = input('Ingrese nuevamente su teléfono:\n')
+
+                                        if len(telefono_usuario) < 10 or len(telefono_usuario) > 15:
+                                            intentos = intentos + 1
+                                        else:
+                                            break
+
+                                if len(clave_usuario) < 8:
+                                    while (intentos < 9):
+                                        print('¡Error! La clave debe contener 8 o más carácteres')
+                                        clave_usuario = input('Ingrese nuevamente su clave')
+
+                                        if len(clave_usuario) < 8:
+                                            intentos = intentos + 1
+                                        else:
+                                            break
+                                
+                                if (intentos < 9):
+
+                                    try:
+                                        dni_usuario = int(dni_usuario)
+                                        telefono_usuario = int(telefono_usuario)
+
+                                        cliente = Cliente(
+                                            dni_cliente= dni_usuario,
+                                            nombre=nombre_usuario,
+                                            apellido=apellido_usuario,
+                                            email=email_usuario,
+                                            telefono=telefono_usuario,
+                                            clave=clave_usuario,
+                                            fecha_registro=datetime.now()
+                                        )
+
+                                        diccionario_clientes[cliente.email] = cliente
+
+                                        print(f'¡Éxito! El usuario "{cliente.nombre} {cliente.apellido}" ha sido registrado como cliente correctamente')
+                                        break
+                                    except ValueError:
+                                        print('¡Error! No se ha podido registrar en el sistema. Pruebe nuevamente')
+                                else:
+                                    print('¡Error! Haz alcanzado el límite máximo de intentos... Vuelve a intentarlo más tarde')
+                                    break
+                            except ValueError:
+                                print('¡Error! No se ha podido registrar en el sistema. Pruebe nuevamente')
+                                intentos = intentos + 1
+                case 3:
+                    print('Saliendo...')
+                    break
+                case _:
+                    print('¡Ops! Parece que haz seleccionado una opción no válida. Pruebe nuevamente...')
+        except ValueError:
+            print('¡Error! Ingrese un número de opción válido')

@@ -1,13 +1,13 @@
-
-
+# Módulos necesarios
+from clases.direccion import Direcciones_empleado
 
 # Creación de clase
 class Empleado:
 
     # Función inicial: INIT
-    def __init__(self, dni_empleado, direccion, nombre, apellido, email, clave, telefono, fecha_ingreso, cvu_empleado, alias_empleado, estado='libre'):
+    def __init__(self, dni_empleado, direccion: Direcciones_empleado, nombre, apellido, email, clave, telefono, fecha_ingreso, cvu_empleado, alias_empleado, estado='libre'):
         self.dni_empleado = dni_empleado
-        self.id_direccion = direccion
+        self.id_direccion = direccion.id_direccion
         self.nombre = nombre
         self.apellido = apellido
         self.email = email
@@ -29,9 +29,8 @@ class Empleado:
         print(f'2. DNI: {self.dni_empleado}')
         print(f'3. Email: {self.email}')
         print(f'4. Clave: {self.clave}')
-        print(f'5. Teléfono: {self.clave}')
+        print(f'5. Teléfono: {self.telefono}')
         print(f'6. Fecha de ingreso: {self.fecha_ingreso}')
         print(f'7. Estado: {self.estado}')
         print(f'8. CVU: {self.cvu_empleado}')
         print(f'9. Alias: {self.alias_empleado}')
-        

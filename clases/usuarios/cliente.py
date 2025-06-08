@@ -22,5 +22,5 @@ class Cliente:
         print(f'2. DNI: {self.dni_cliente}')
         print(f'3. Email: {self.email}')
         print(f'4. Clave: {self.clave}')
-        print(f'5. Teléfono: {self.clave}')
+        print(f'5. Teléfono: {self.telefono}')
         print(f'6. Fecha de registro: {self.fecha_registro}')

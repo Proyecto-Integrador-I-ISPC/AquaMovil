@@ -65,16 +65,15 @@ diccionario_administradores = {
 }
 
 # Mensaje bienvenida
-print('¡Bienvenido a AquaMóvil!')
+print('\n¡Bienvenido a AquaMóvil!')
 
 while (True):
-
-    print('Por favor, seleccione una opción:')
+    
     print('1. Iniciar Sesión')
     print('2. Registrarse')
-    print('3. Salir')
-
-    respuesta = input()
+    print('3. Salir\n')
+    
+    respuesta = input('Por favor, seleccione una opción: ')
     respuesta = respuesta.replace(" ", "")
 
     if not respuesta:
@@ -88,8 +87,8 @@ while (True):
 
                         intentos = 0
 
-                        usuario = input('Ingrese su usuario:\n')
-                        contraseña = input('Ingrese su contraseña:\n')
+                        usuario = input('Ingrese su usuario (email): ')
+                        contraseña = input('Ingrese su contraseña: ')
 
                         usuario = usuario.replace(" ", "")
                         contraseña = contraseña.replace(" ", "")
@@ -100,8 +99,9 @@ while (True):
                             if usuario in diccionario_clientes:
                                 cliente_obj = diccionario_clientes[usuario]
                                 if cliente_obj.clave == contraseña:
-                                    print('¡Ingreso exitoso! Haz iniciado sesión como cliente')
+                                    print('\n¡Ingreso exitoso! Haz iniciado sesión como cliente')
                                     while True:
+                                        print('Tus opciones son:')
                                         print('1. Ver datos personales')
                                         print('2. Salir')
                                         respuesta_cliente = input().strip()
@@ -120,14 +120,16 @@ while (True):
                                             else:
                                                 print('¡Ops! Opción no válida. Pruebe nuevamente...')
                                         except ValueError:
-                                            print('¡Error! Ingrese un número válido')
+                                            print('\n¡Error! Ingrese un número válido')
+                                    break
                                 else:
                                     print('Contraseña incorrecta. Intente nuevamente.')
                             elif usuario in diccionario_empleados:
                                 empleado_obj = diccionario_empleados[usuario]
                                 if empleado_obj.clave == contraseña:
-                                    print('¡Ingreso exitoso! Haz iniciado sesión como empleado')
+                                    print('\n¡Ingreso exitoso! Haz iniciado sesión como empleado')
                                     while True:
+                                        print('Tus opciones son:')
                                         print('1. Ver datos personales')
                                         print('2. Salir')
                                         respuesta_empleado = input().strip()
@@ -146,23 +148,24 @@ while (True):
                                             else:
                                                 print('¡Ops! Opción no válida. Pruebe nuevamente...')
                                         except ValueError:
-                                            print('¡Error! Ingrese un número válido')
+                                            print('\n¡Error! Ingrese un número válido')
+                                    break
                                 else:
                                     print('Contraseña incorrecta. Intente nuevamente.')
                             elif usuario in diccionario_administradores:
                                 administrador_obj = diccionario_administradores[usuario]
                                 if administrador_obj.clave == contraseña:
-                                    print('¡Ingreso exitoso! Haz iniciado sesión como administrador')
+                                    print('\n¡Ingreso exitoso! Haz iniciado sesión como administrador')
                 
                                     while (True):
-                                        print('Tus opciones son:')
+                                        print('\nTus opciones son:')
                                         print('1. Ver datos personales')
                                         print('2. Ver clientes')
                                         print('3. Ver empleados')
                                         print('4. Ver administradores')
                                         print('5. Cambiar un rol')
                                         print('6. Eliminar un usuario')
-                                        print('7. Salir')
+                                        print('7. Salir\n')
                                         respuesta_administrador = input()
                                         respuesta_administrador = respuesta_administrador.replace(" ", "")
 
@@ -175,16 +178,16 @@ while (True):
                                                     case 1:
                                                         administrador_obj.mostrar_datos_personales()
                                                     case 2:
-                                                        administrador_obj.mostrar_clientes()
+                                                        administrador_obj.mostrar_clientes(diccionario_clientes)
                                                     case 3:
-                                                        administrador_obj.mostrar_empleados()
+                                                        administrador_obj.mostrar_empleados(diccionario_empleados)
                                                     case 4:
-                                                        administrador_obj.mostrar_administradores()
+                                                        administrador_obj.mostrar_administradores(diccionario_administradores)
                                                     case 5:
                                                         while (True):
-                                                            print('Opciones Disponibles:')
+                                                            print('\nOpciones Disponibles:')
                                                             print('1. Ingrese el email del usuario que desea cambiar de rol')
-                                                            print('2. Salir')
+                                                            print('2. Salir\n')
                                                             opcion_seleccionada = input()
                                                             opcion_seleccionada = opcion_seleccionada.replace(" ", "")
                                                             if not opcion_seleccionada:
@@ -194,20 +197,19 @@ while (True):
                                                                     opcion_seleccionada = int(opcion_seleccionada)
                                                                     match opcion_seleccionada:
                                                                         case 1:
-                                                                            print('Ingrese el email:')
-                                                                            usuario_a_cambiar = input()
+                                                                            usuario_a_cambiar = input('\nIngrese el email: ')
                                                                             usuario_a_cambiar = usuario_a_cambiar.replace(" ", "")
 
                                                                             if not usuario_a_cambiar:
                                                                                 print('¡Error! Campo vacío no permitido. Pruebe nuevamente...')
                                                                             else:
                                                                                 if usuario_a_cambiar in diccionario_clientes.keys():
-                                                                                    print(f'El usuario con correo "{usuario_a_cambiar}" es un cliente')
+                                                                                    print(f'\nEl usuario con correo "{usuario_a_cambiar}" es un cliente')
                                                                                     print('¿Qué rol desea asignarle?')
                                                                                     while(True):
                                                                                         print('1. Empleado') 
                                                                                         print('2. Administrador')
-                                                                                        print('3. Salir')
+                                                                                        print('3. Salir\n')
                                                                                         opcion_rol = input()
                                                                                         opcion_rol = opcion_rol.replace(" ", "")
 
@@ -218,11 +220,11 @@ while (True):
                                                                                                 opcion_rol = int(opcion_rol)
                                                                                                 match opcion_rol:
                                                                                                     case 1:
-                                                                                                        administrador_obj.cambiar_rol_empleado(usuario_a_cambiar)
-                                                                                                        print(f'¡Éxito! El cliente con correo "{usuario_a_cambiar}" ahora es empleado')
+                                                                                                        administrador_obj.cambiar_rol_empleado(diccionario_clientes, diccionario_empleados, diccionario_administradores, usuario_a_cambiar)
+                                                                                                        break
                                                                                                     case 2:
-                                                                                                        administrador_obj.cambiar_rol_administrador(usuario_a_cambiar)
-                                                                                                        print(f'¡Éxito! El cliente con correo "{usuario_a_cambiar}" ahora es administrador')
+                                                                                                        administrador_obj.cambiar_rol_administrador(diccionario_clientes, diccionario_empleados, diccionario_administradores, usuario_a_cambiar)
+                                                                                                        break
                                                                                                     case 3:
                                                                                                         print('Saliendo...')
                                                                                                         break
@@ -231,12 +233,12 @@ while (True):
                                                                                             except ValueError:
                                                                                                 print('¡Error! Ingrese un número de opción válida')
                                                                                 elif usuario_a_cambiar in diccionario_empleados.keys():
-                                                                                    print(f'El usuario con correo "{usuario_a_cambiar}" es un empleado')
+                                                                                    print(f'\nEl usuario con correo "{usuario_a_cambiar}" es un empleado')
                                                                                     print('¿Qué rol desea asignarle?')
                                                                                     while(True):
                                                                                         print('1. Cliente') 
                                                                                         print('2. Administrador')
-                                                                                        print('3. Salir')
+                                                                                        print('3. Salir\n')
                                                                                         opcion_rol = input()
                                                                                         opcion_rol = opcion_rol.replace(" ", "")
 
@@ -247,11 +249,11 @@ while (True):
                                                                                                 opcion_rol = int(opcion_rol)
                                                                                                 match opcion_rol:
                                                                                                     case 1:
-                                                                                                        administrador_obj.cambiar_rol_cliente(usuario_a_cambiar)
-                                                                                                        print(f'¡Éxito! El empleado con correo "{usuario_a_cambiar}" ahora es cliente')
+                                                                                                        administrador_obj.cambiar_rol_cliente(diccionario_clientes, diccionario_empleados, diccionario_administradores, usuario_a_cambiar)
+                                                                                                        break
                                                                                                     case 2:
-                                                                                                        administrador_obj.cambiar_rol_administrador(usuario_a_cambiar)
-                                                                                                        print(f'¡Éxito! El empleado con correo "{usuario_a_cambiar}" ahora es administrador')
+                                                                                                        administrador_obj.cambiar_rol_administrador(diccionario_clientes, diccionario_empleados, diccionario_administradores, usuario_a_cambiar)
+                                                                                                        break
                                                                                                     case 3:
                                                                                                         print('Saliendo...')
                                                                                                         break
@@ -260,12 +262,12 @@ while (True):
                                                                                             except ValueError:
                                                                                                 print('¡Error! Ingrese un número de opción válida')
                                                                                 elif usuario_a_cambiar in diccionario_administradores.keys():
-                                                                                    print(f'El usuario con correo "{usuario_a_cambiar}" es un administrador')
+                                                                                    print(f'\nEl usuario con correo "{usuario_a_cambiar}" es un administrador')
                                                                                     print('¿Qué rol desea asignarle?')
                                                                                     while(True):
                                                                                         print('1. Cliente') 
                                                                                         print('2. Empleado')
-                                                                                        print('3. Salir')
+                                                                                        print('3. Salir\n')
                                                                                         opcion_rol = input()
                                                                                         opcion_rol = opcion_rol.replace(" ", "")
 
@@ -276,11 +278,11 @@ while (True):
                                                                                                 opcion_rol = int(opcion_rol)
                                                                                                 match opcion_rol:
                                                                                                     case 1:
-                                                                                                        administrador_obj.cambiar_rol_cliente(usuario_a_cambiar)
-                                                                                                        print(f'¡Éxito! El administrador con correo "{usuario_a_cambiar}" ahora es cliente')
+                                                                                                        administrador_obj.cambiar_rol_cliente(diccionario_clientes, diccionario_empleados, diccionario_administradores, usuario_a_cambiar)
+                                                                                                        break
                                                                                                     case 2:
-                                                                                                        administrador_obj.cambiar_rol_empleado(usuario_a_cambiar)
-                                                                                                        print(f'¡Éxito! El administrador con correo "{usuario_a_cambiar}" ahora es empleado')
+                                                                                                        administrador_obj.cambiar_rol_empleado(diccionario_clientes, diccionario_empleados, diccionario_administradores, usuario_a_cambiar)
+                                                                                                        break
                                                                                                     case 3:
                                                                                                         print('Saliendo...')
                                                                                                         break
@@ -291,17 +293,17 @@ while (True):
                                                                                 else:
                                                                                     print('¡Error! El email ingresado no existe')
                                                                         case 2:
-                                                                            print('Saliendo...')
+                                                                            print('\nSaliendo...')
                                                                             break
                                                                         case _:
                                                                             print('¡Ops! Parece que haz seleccionado una opción no válida. Pruebe nuevamente...')
                                                                 except ValueError:
-                                                                    print('¡Error! Ingrese un número de opción válida') 
+                                                                    print('\n¡Error! Ingrese un número de opción válida') 
                                                     case 6:
                                                         while (True):
-                                                            print('Opciones Disponibles:')
+                                                            print('\nOpciones Disponibles:')
                                                             print('1. Ingrese el email del usuario que desea eliminar')
-                                                            print('2. Salir')
+                                                            print('2. Salir\n')
                                                             opcion_seleccionada = input()
                                                             opcion_seleccionada = opcion_seleccionada.replace(" ", "")
                                                             if not opcion_seleccionada:
@@ -311,22 +313,21 @@ while (True):
                                                                     opcion_seleccionada = int(opcion_seleccionada)
                                                                     match opcion_seleccionada:
                                                                         case 1:
-                                                                            print('Ingrese el email:')
-                                                                            usuario_a_eliminar = input()
+                                                                            usuario_a_eliminar = input('\nIngrese el email: ')
                                                                             usuario_a_eliminar = usuario_a_eliminar.replace(" ", "")
 
                                                                             if not usuario_a_eliminar:
                                                                                 print('¡Error! Campo vacío no permitido. Pruebe nuevamente...')
                                                                             else:
                                                                                 if usuario_a_eliminar in diccionario_clientes.keys():
-                                                                                    administrador_obj.eliminar_cliente(usuario_a_eliminar)
-                                                                                    print(f'¡Éxito! El cliente "{usuario_a_eliminar}" ha sido eliminado correctamente')
+                                                                                    administrador_obj.eliminar_cliente(diccionario_clientes, administrador_obj, usuario_a_eliminar)
+                                                                                    break
                                                                                 elif usuario_a_eliminar in diccionario_empleados.keys():
-                                                                                    administrador_obj.eliminar_empleado(usuario_a_eliminar)
-                                                                                    print(f'¡Éxito! El empleado "{usuario_a_eliminar}" ha sido eliminado correctamente')
+                                                                                    administrador_obj.eliminar_empleado(diccionario_empleados, usuario_a_eliminar)
+                                                                                    break
                                                                                 elif usuario_a_eliminar in diccionario_administradores.keys() and usuario_a_eliminar != administrador_uno:
-                                                                                    administrador_obj.eliminar_administrador(usuario_a_eliminar)
-                                                                                    print(f'¡Éxito! El administrador "{usuario_a_eliminar}" ha sido eliminado correctamente')
+                                                                                    administrador_obj.eliminar_administrador(diccionario_administradores, administrador_obj, usuario_a_eliminar)
+                                                                                    break
                                                                                 else:
                                                                                     print('¡Error! El usuario que deseas eliminar no existe')
                                                                         case 2:
@@ -335,23 +336,23 @@ while (True):
                                                                         case _:
                                                                             print('¡Ops! Parece que haz seleccionado una opción no válida. Pruebe nuevamente...')
                                                                 except ValueError:
-                                                                    print('¡Error! Ingrese un número de opción válida')
+                                                                    print('\n¡Error! Ingrese un número de opción válida')
                                                     case 7:
-                                                        print('Saliendo...')
+                                                        print('\nSaliendo...')
                                                         break
                                                     case _:
                                                         print('¡Ops! Parece que haz seleccionado una opción no válida. Pruebe nuevamente...')
                                             except ValueError:
-                                                print('¡Error! Ingrese un número de opción válida')
+                                                print('\n¡Error! Ingrese un número de opción válida')
                                     break
                                 else:
-                                    print('No existe ningún usuario registrado con ese usuario y contraseña.')
+                                    print('\nNo existe ningún usuario registrado con ese usuario y contraseña.')
                             else:
                                 if intentos < 3:
-                                    print('No se ha encontrado ninguna cuenta asociada a esos datos')
+                                    print('\nNo se ha encontrado ninguna cuenta asociada a esos datos')
                                     intentos = intentos + 1
                                 else:
-                                    print('¡Error! Vuelve a intentarlo más tarde...')
+                                    print('\n¡Error! Vuelve a intentarlo más tarde...')
                                     break
                 case 2:
                     intentos = 0
@@ -360,12 +361,12 @@ while (True):
                     while intentos < max_intentos:
                         print('\nComplete el siguiente formulario para registrarse en el sistema:')
 
-                        dni_usuario = input('DNI (sin guiones ni puntos):\n').replace(" ", "")
-                        nombre_usuario = input('Nombre:\n').replace(" ", "")
-                        apellido_usuario = input('Apellido:\n').replace(" ", "")
-                        email_usuario = input('Email:\n').replace(" ", "")
-                        telefono_usuario = input('Teléfono:\n').replace(" ", "")
-                        clave_usuario = input('Genere una clave:\n').replace(" ", "")
+                        dni_usuario = input('DNI (sin guiones ni puntos): ').replace(" ", "")
+                        nombre_usuario = input('Nombre: ').replace(" ", "")
+                        apellido_usuario = input('Apellido: ').replace(" ", "")
+                        email_usuario = input('Email: ').replace(" ", "")
+                        telefono_usuario = input('Teléfono (sin símbolos ni espacios): ').replace(" ", "")
+                        clave_usuario = input('Genere una clave: ').replace(" ", "")
 
                         if not all([dni_usuario, nombre_usuario, apellido_usuario, email_usuario, telefono_usuario, clave_usuario]):
                             print('¡Error! Campo/s vacío/s no permitido/s. Pruebe nuevamente...')
@@ -413,7 +414,7 @@ while (True):
                             print('\n¡Error! Has alcanzado el límite máximo de intentos. Vuelve a intentarlo más tarde.')
                             break
                 case 3:
-                    print('\nSaliendo del sistema... ¡Hasta luego!')
+                    print('\nSaliendo del sistema... ¡Hasta luego!\n')
                     break
                 case _:
                     print('¡Ops! Opción no válida. Pruebe nuevamente...')

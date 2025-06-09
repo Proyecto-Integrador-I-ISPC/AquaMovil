@@ -1,0 +1,17 @@
+COMANDOS BÁSICOS
+
+git clone <URL>                  # Clona un repositorio remoto a tu PC
+git status                       # Muestra el estado de los archivos
+git add .                        # Agrega todos los archivos modificados al area de preparación
+git commit -m "mensaje"          # Guarda los cambios con un mensaje
+git push origin <rama>           # Sube los cambios de tu rama al repositorio remoto
+git pull                         # Trae los últimos cambios del repositorio remoto
+git branch                       # Muestra todas las ramas y en cuál estás
+git checkout <rama>              # Cambia de rama
+git checkout -b <nueva-rama>     # Crea una nueva rama y se cambia a ella
+
+COMANDOS ÚTILES ADICIONALES
+
+git log                         # Muestra el historial de commits
+git reset <archivo>             # Saca un archivo del área de preparación (si se hizo un git add por error)
+git merge <rama>                # Une otra rama con la actual 

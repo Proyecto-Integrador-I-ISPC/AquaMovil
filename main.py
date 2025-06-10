@@ -320,7 +320,7 @@ while (True):
                                                                                 print('¡Error! Campo vacío no permitido. Pruebe nuevamente...')
                                                                             else:
                                                                                 if usuario_a_eliminar in diccionario_clientes.keys():
-                                                                                    administrador_obj.eliminar_cliente(diccionario_clientes, administrador_obj, usuario_a_eliminar)
+                                                                                    administrador_obj.eliminar_cliente(diccionario_clientes, usuario_a_eliminar)
                                                                                     break
                                                                                 elif usuario_a_eliminar in diccionario_empleados.keys():
                                                                                     administrador_obj.eliminar_empleado(diccionario_empleados, usuario_a_eliminar)
